@@ -1,0 +1,4 @@
+<div [formGroup]="group">
+	<nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" formControlName="calendar"
+		[nzFormat]="dateFormat"></nz-date-picker>
+</div>

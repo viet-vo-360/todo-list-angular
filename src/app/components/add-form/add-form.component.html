@@ -1,0 +1,24 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="addTask()">
+	<nz-form-item>
+		<nz-form-label [nzSpan]="6" nzFor="title">Title</nz-form-label>
+		<nz-form-control [nzSpan]="14">
+			<nz-input-group [nzPrefix]="prefixTemplateTitle">
+				<input nz-input name="title" type="text" id="title" formControlName="title">
+			</nz-input-group>
+			<ng-template #prefixTemplateTitle><i nz-icon nzType="tags" nzTheme="outline"></i></ng-template>
+		</nz-form-control>
+		<nz-form-control [nzSpan]="14">
+			<app-calendar [group]="validateForm"></app-calendar>
+		</nz-form-control>
+		<nz-form-control [nzSpan]="14">
+			<app-category [group]="validateForm"></app-category>
+		</nz-form-control>
+		<nz-form-control [nzSpan]="14">
+			<app-important [group]="validateForm"></app-important>
+		</nz-form-control>
+		<nz-form-control [nzSpan]="14">
+			<button nz-button nzType="primary">ADD Todo</button>
+		</nz-form-control>
+	</nz-form-item>
+
+</form>

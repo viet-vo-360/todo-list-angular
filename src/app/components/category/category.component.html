@@ -1,0 +1,5 @@
+<div [formGroup]="group">
+	<nz-select nzPlaceHolder="Select category" formControlName="category">
+		<nz-option *ngFor="let option of optionList" [nzValue]="option.value" [nzLabel]="option.title"></nz-option>
+	</nz-select>
+</div>

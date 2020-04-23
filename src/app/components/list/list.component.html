@@ -1,0 +1,27 @@
+<nz-table #basicTable [nzData]="tasks">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Date</th>
+			<th>Category</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let task of tasks" [ngClass]="{'important-task': task.isImportant}">
+			<td>{{task.title}}</td>
+			<td>{{task.date}}</td>
+			<td>{{task.category}}</td>
+			<td>
+				<nz-space [nzSize]="size">
+					<nz-space-item>
+						<button nz-button nzType="primary">Complete</button>
+					</nz-space-item>
+					<nz-space-item>
+						<button nz-button nzType="primary" nzDanger (click)="deleteTask(task.key)">Delete</button>
+					</nz-space-item>
+				</nz-space>
+			</td>
+		</tr>
+	</tbody>
+</nz-table>
