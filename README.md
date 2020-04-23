@@ -1,6 +1,7 @@
 # TodoList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+And applied [Ant Design of Angular](https://ng.ant.design/docs/introduce/en) and [its components](https://ng.ant.design/components/button/en)
 
 ## Development server
 
